@@ -24,3 +24,51 @@ if (numberValue1) {
   biggerNumber = numberValue3;
   console.log(`the bigger number is: ${number3}`);
 }
+
+// Task 2 Визначення сезону
+
+// 1 Зима 12, 1, 2 Весна 3, 4, 5 Літо 6, 7, 8 Осінь 9, 10, 11
+
+let currentMonth = Number(prompt(`For define season enter number from 1 to 12 `));
+
+let season;
+
+switch (currentMonth) {
+  case 1:
+    season = 'Winter';
+  case 2:
+    season = 'Winter';
+  case 12:
+    season = 'Winter';
+    break;
+
+  case 3:
+    season = 'Spring';
+  case 4:
+    season = 'Spring';
+  case 5:
+    season = 'Spring';
+    break;
+
+  case 6:
+    season = 'Summer';
+  case 7:
+    season = 'Summer';
+  case 8:
+    season = 'Summer';
+    break;
+
+  case 9:
+    season = 'Autumn';
+  case 10:
+    season = 'Autumn';
+  case 11:
+    season = 'Autumn';
+    break;
+
+  default:
+    season = "The season like this number does't exist";
+    break;
+};
+
+console.log(season);
