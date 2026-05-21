@@ -1,5 +1,5 @@
 // Task 1 Порівняння трьох чисел:
-/*
+
 let number1 = Number(prompt(`Enter first number`, ''));
 let number2 = Number(prompt(`Enter second number`, ''));
 let number3 = Number(prompt(`Enter third number`, ''));
@@ -95,7 +95,7 @@ if(number > 0){
 }
 
 console.log(numberType);
-*/
+
 
 // Task 5 Оцінка студента
 let studentScore = Number(prompt(`Enter student score from 0 to 100`));
