@@ -1,5 +1,5 @@
 // Task 1 Порівняння трьох чисел:
-
+/*
 let number1 = Number(prompt(`Enter first number`, ''));
 let number2 = Number(prompt(`Enter second number`, ''));
 let number3 = Number(prompt(`Enter third number`, ''));
@@ -72,3 +72,13 @@ switch (currentMonth) {
 };
 
 console.log(season);
+
+*/
+// Ttask 3 Перевірка величини кута
+ let angle = Number(prompt(`Enter angle value from 0 to 360`));
+
+ let angleType;
+
+ angle >= 0 && angle < 90 ? angleType = 'Acute angle' : angleType = 'blunt angle';
+
+ console.log(angleType);
