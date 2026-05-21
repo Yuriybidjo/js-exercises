@@ -73,7 +73,6 @@ switch (currentMonth) {
 
 console.log(season);
 
-*/
 // Ttask 3 Перевірка величини кута
  let angle = Number(prompt(`Enter angle value from 0 to 360`));
 
@@ -82,3 +81,50 @@ console.log(season);
  angle >= 0 && angle < 90 ? angleType = 'Acute angle' : angleType = 'blunt angle';
 
  console.log(angleType);
+
+// Task 4 Визначення розміру числа
+let number = Number(prompt(`Enter positive or negative number or zero `));
+let numberType;
+
+if(number > 0){
+  numberType = 'Positive number';
+} else if (number < 0) {
+  numberType = 'Negative number';
+} else {
+  numberType = 'Zero';
+}
+
+console.log(numberType);
+*/
+
+// Task 5 Оцінка студента
+let studentScore = Number(prompt(`Enter student score from 0 to 100`));
+
+let studentsGrade;
+
+if (studentScore >= 90 && studentScore <= 100) {
+  studentsGrade = 'A';
+} else if (studentScore >= 80 && studentScore <= 89) {
+  studentsGrade = 'B';
+} else if (studentScore >= 70 && studentScore <= 79) {
+  studentsGrade = 'C';
+} else if (studentScore >= 60 && studentScore <= 69) {
+  studentsGrade = 'D';
+} else if (studentScore < 60 && studentScore >= 0) {
+  studentsGrade = 'F';
+} else {
+  studentsGrade = "The score like this number does't exist";
+}
+console.log(studentsGrade);
+
+//Збільште оцінку студента на одиницю, використовуючи постфіксний інкремент. Виведіть у консоль повідомлення про оцінку до і після інкремента та визначте за допомогою тернарного оператора, чи студент зарахований чи ні (прохідний бал 60).
+
+let isPassed = 60;
+
+studentScore++;
+
+console.log(`Student score after increment: ${studentScore}`);
+
+let isStudentPassed = studentScore >= isPassed ? 'Student is passed' : 'Student is not passed';
+console.log(isStudentPassed); 
+
