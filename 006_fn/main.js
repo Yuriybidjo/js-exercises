@@ -44,7 +44,14 @@ console.log(calculateValue(10, 0, '/'));
 
 let users = ['Степан', 'Симон', 'Василь', 'Дмитро', 'Роман'];
 
-function welcomeUser(users, hiUser) {
+// function welcomeUser(users, hiUser) {
+//   for (let i = 0; i < users.length; i++) {
+//     hiUser(users[i]);
+//   }
+// };
+
+// Task 3 rewrite with arrow function
+let welcomeUser = (users, hiUser) => {
   for (let i = 0; i < users.length; i++) {
     hiUser(users[i]);
   }
@@ -55,3 +62,33 @@ let hiUser = (user) => {
 };
 
 welcomeUser(users, hiUser);
+
+// Task 4 Параметри за замовчуванням
+//  Створіть функцію, яка приймає параметр зі значенням за замовчуванням і виводить його.
+
+let printValue = (value = "Default value") => {
+  console.log(value);
+};
+
+printValue("New value");
+printValue();
+
+// Task 5 Задача з колбеком: 
+// Створіть функцію, яка приймає стрінг значення і функцію-колбек, і викликає цю функцію-колбек, передаючи їй стрінг значення
+
+let getCallback = (message, callback) => {
+  callback(message); 
+};
+
+getCallback('hello callback message', (fn_likeSecondArgument) => {
+  console.log(fn_likeSecondArgument);
+});
+
+// Task 6 Перепишіть стрілкову функцію в звичайну: const multiplyValues = (a, b, c) => a * b * c;
+
+function multiplyValues(a, b, c) {
+  let result = a * b * c;
+  return result;
+}
+
+console.log(multiplyValues(12, 3, 1.4));
