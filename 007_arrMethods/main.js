@@ -126,3 +126,109 @@ function removeElements(arr, index, count){
 let splicedArray = removeElements(fillNumbers, 1, 2);
 
 console.log(splicedArray);
+
+// reverse:
+// Завдання 1:
+// Створіть масив і використайте метод reverse, щоб перевернути змінений порядок його елементів.
+//   Завдання 2:
+//  Напишіть функцію, яка приймає масив і використовує reverse для зміни порядку його елементів.
+
+let reverseLetters = ['M', 'a', 'x', 'i', 'M'];
+reverseLetters.reverse();
+
+console.log(reverseLetters);
+
+function reverseArray(arr){
+  arr.reverse();
+  return arr;
+}
+
+let reversedArray = reverseArray(reverseLetters);
+
+console.log(reversedArray);
+
+// concat:
+// Завдання 1:
+//  Створіть два масиви і використайте метод concat, щоб об'єднати їх в один новий масив.
+// Завдання 2: 
+// Напишіть функцію, яка приймає два масиви і використовує concat для об'єднання їх в новий масив.
+
+let myMentor = ['M', 'a', 'x', 'i', 'm'];
+let theBestMentor = ['i', 's', 't', 'h', 'e', 'B', 'e', 's', 't'];
+
+let combinedMentors = myMentor.concat(theBestMentor);
+console.log(combinedMentors);
+
+function combineArrays(arr1, arr2){
+  return arr1.concat(arr2);
+};
+
+// includes:
+// Завдання 1:
+//  Створіть масив і використайте метод includes, щоб перевірити, чи масив містить певний елемент.
+//   Завдання 2:
+//  Напишіть функцію, яка приймає масив і елемент, і використовує includes для перевірки наявності цього елемента в масиві.
+
+let hasLetterM = combinedMentors.includes('M');
+let hasLetter_m = combinedMentors.includes('m');
+
+console.log(hasLetterM);
+console.log(hasLetter_m);
+
+function checkElement(arr, element){
+  return arr.includes(element);
+};  
+
+let hasLetterA = checkElement(combinedMentors, 'a');
+let hasLetterZ = checkElement(combinedMentors, 'z');
+console.log(hasLetterA);
+console.log(hasLetterZ);
+
+// filter:
+// Завдання 1:
+//  Створіть масив чисел і використайте метод filter, щоб створити новий масив, що містить лише парні числа.
+//   Завдання 2:
+//  Напишіть функцію, яка приймає масив і функцію - умову, і використовує filter для створення нового масиву, що містить елементи, які задовольняють умову.
+
+let numbersFilter = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let numbersFiltered = numbersFilter.filter((num) => {
+  num = num % 2 === 0;
+  return num;
+});
+
+console.log(numbersFiltered);
+
+function filterArray(arr, condition){
+  return arr.filter(condition);
+};    
+
+let evenNumbers = filterArray(numbersFilter, (num) => num % 2 === 0);
+let oddNumbers = filterArray(numbersFilter, (num) => num % 2 !== 0);
+
+console.log(evenNumbers);
+console.log(oddNumbers);
+
+// map:
+// Завдання 1:
+//  Створіть масив чисел і використайте метод map, щоб створити новий масив, який містить квадрати кожного числа.
+//   Завдання 2:
+//  Напишіть функцію, яка приймає масив і функцію - перетворювач, і використовує map для створення нового масиву, в якому кожен елемент отримує стрінг до значення
+
+let numbersMap = [1, 2, 3, 4, 5];
+
+let squaredNumbers = numbersMap.map((num) => {
+  return num ** 2;
+}); 
+
+console.log(squaredNumbers);
+
+function mapArray(arr, transformer){
+  return arr.map(transformer);
+};
+
+let stringNumbers = mapArray(squaredNumbers, (element) => {
+  return ` New  Map number in square: ${element}`;
+});
+
+console.log(stringNumbers); 
