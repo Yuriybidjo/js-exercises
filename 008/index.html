@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>var, for in, for of</title>
+  </head>
+  <body>
+    <script>
+      //1. Переишіть цей код використовуючи let const~  Замість var
+
+      let number = 5;
+
+      for (var i = 0; i < number; i++) {
+        console.log(i);
+      }
+      console.log("------------------");
+
+      console.log(i);
+      // Виведе 5, оскільки змінна i була оголошена з використанням var і має функціональну область видимості, тому вона доступна поза межами циклу.
+
+      for (let i = 0; i < number; i++) {
+        console.log(i);
+      }
+      console.log("------------------");
+
+      // console.log(i);
+
+      // Виведе помилку ReferenceError, оскільки змінна i була оголошена з використанням let і має блочну область видимості, тому вона недоступна поза межами циклу.
+
+      //2. Замість var
+
+      var message1 = "test var";
+
+      function example1() {
+        if (true) {
+          var message1 = "Hello, var!"; // Виведе 'Hello, var! Створить нову змінну message1 в функції example1, яка перекриє глобальну змінну message1'
+          console.log(message1);
+        }
+        console.log(message1); // Виведе 'Hello, var! Перезапише значення message1 з глобальної області видимості'
+      }
+
+      example1();
+
+      let message2 = "test let";
+
+      function example2() {
+        if (true) {
+          let message2 = "Hello, let!";
+          console.log(message2); // Виведе 'Hello, let! Створить нову змінну message2 в блочній області видимості функції example2'
+        }
+        console.log(message2); // Виведе 'test let Залишить значення message2 з глобальної області видимості без змін'
+      }
+
+      example2();
+
+      // Використовуючи for in  виведіть значення з обєктку в console.log
+      console.log("------------------");
+
+      const person = {
+        name: "John",
+        age: 25,
+        occupation: "Developer",
+      };
+
+      for (let key in person) {
+        console.log(`${key}: ${person[key]}`);
+      }
+
+      // Використовуючи for of  та for in  виведіть занчення з обєктів які знаходяться в масиві
+      console.log("------------------");
+
+      const students = [
+        { name: "Alice", age: 20, grade: "A" },
+        { name: "Bob", age: 22, grade: "B" },
+        { name: "Charlie", age: 21, grade: "C" },
+      ];
+
+      for (let student of students) {
+        for (let key in student) {
+          console.log(`${key}: ${student[key]}`);
+        }
+      }
+    </script>
+  </body>
+</html>
