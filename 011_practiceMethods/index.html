@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spread, Rest and Destructuring</title>
+  </head>
+  <body>
+    <script>
+      // Spread operator
+      // Напишіть програму, яка об'єднує два масиви в один, використовуючи оператор Spread, і виводить новий масив.
+
+      const arr1 = [1, 2, 3];
+      const arr2 = [4, 5, 6];
+      
+      const combined = [...arr1, ...arr2];
+
+      console.log(combined); // [1, 2, 3, 4, 5, 6]
+
+      // Rest operator
+      // Створіть функцію, яка приймає перший аргумент як рядок, а решту аргументів зберігає в масиві за допомогою оператора Rest. Функція повинна вивести рядок і масив.
+
+      function sum(string, ...tail) {
+        return `${string} ${tail.join(" ")}`;
+      };
+
+      const result = sum("Hello", "Maxim", "this", "is", "Yuriy");
+      console.log(result); // Hello Maxim this is Yuriy
+
+      // Destructuring
+      const person = { name: "Lucky Man", age: 100 };
+      const { name, age } = person;
+
+      console.log(name); // Lucky Man
+      console.log(age); // 100
+
+      // Тема: TypeOf
+      // Створіть функцію, яка приймає аргумент будь-якого типу та виводить повідомлення про його тип за допомогою оператора typeof.
+
+      function checkType(arg) {
+        console.log(typeof arg);
+      };
+
+      checkType("hello"); // string
+      checkType(42); // number
+      checkType(true); // boolean
+      checkType(null); // object
+      checkType(undefined); // undefined
+      checkType(function () {}); // function
+
+      // Напишіть програму, яка перевіряє тип змінної та виводить повідомлення "Це число", "Це рядок" або "Це інший тип", використовуючи оператор typeof.
+
+      function checkVariableType(arg) {
+        if (typeof arg === "number") {
+          console.log("Це число");
+        } else if (typeof arg === "string") {
+          console.log("Це рядок");
+        } else {
+          console.log("Це інший тип");
+        }
+      };
+
+      checkVariableType(42); // Це число
+      checkVariableType("hello bro"); // Це рядок
+      checkVariableType(true); // Це інший тип
+      checkVariableType(null); // Це інший тип
+      checkVariableType(undefined); // Це інший тип
+    </script>
+  </body>
+</html>
