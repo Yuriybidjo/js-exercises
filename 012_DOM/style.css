@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+.content {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.instructions {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e2e2e2;
+  border-left: 5px solid #333;
+
+  span{
+    font-weight: bold;
+    margin-inline: 10px;
+  }
+}
+
+.item-list {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    text-align: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.new-element {
+  background-color: #ffcc00;
+  padding: 10px;
+  margin-top: 20px;
+  text-align: center;
+  border: 1px solid #ddd;
+}

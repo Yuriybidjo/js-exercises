@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1 id="main-title">
+        Створіть HTML-сторінку з елементами header, section, div, задайте
+        елементам атрибути id, class.
+      </h1>
+    </header>
+    <section id="main-content" class="content">
+      <div class="container">
+        <p class="instructions">
+          Виберіть ці елементи за допомогою
+          <span>getElementById</span>
+          <span>getElementsByClassName</span>
+          <span>getElementsByTagName</span>
+        </p>
+        <p>
+          створіть список ul з 5 елементами li всередині. За допомогою
+          querySelector виберіть: - перший елемент списку - останній елемент
+          списку - 3 елемент списку За допомогою querySelectorAll - всі елементи
+          li в списку - конвертуйте вибрані елменти в массив
+        </p>
+        <p>Створіть на сторінці елемент який вибирається цими селекторами</p>
+        <ul id="item-list" class="item-list">
+          <li class="item">Item 1</li>
+          <li class="item">Item 2</li>
+          <li class="item">Item 3</li>
+          <li class="item">Item 4</li>
+          <li class="item">Item 5</li>
+        </ul>
+        
+        <div id="new-element" class="new-element">Новий елемент для вибору</div>
+
+        <!-- <button id="add-item-btn" class="btn">Add Item</button> -->
+       
+      </div>
+    </section>
+  </body>
+</html>
