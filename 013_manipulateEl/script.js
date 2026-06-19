@@ -61,7 +61,7 @@ for (let i = 0; i < booksArray.length; i++) {
   const tdRating = document.createElement('td');
   tdRating.textContent = book.rating;
 
-  const tdAuthor =document.createElement('td');
+  const tdAuthor = document.createElement('td');
   tdAuthor.textContent = book.author;
 
   tr.appendChild(tdTitle);
@@ -71,6 +71,76 @@ for (let i = 0; i < booksArray.length; i++) {
 
   tbody.appendChild(tr);
 };
+
+//  3)   Створіть HTML-сторінку з контейнером, в який будуть додаватися елементи за допомогою JavaScript.
+
+// 4)Створіть блок контейнер та перебераючи маси створіть елемент Р в залежності від usePrepend розмість його перед контейнером або за контейнером 
+
+const boxElements = document.getElementById('box');
+const boxElements2 = document.getElementById('box2');
+
+const elementsArray = [
+  {
+    tag: 'p',
+    text: 'Element 1',
+  },
+  {
+    tag: 'div',
+    text: 'Element 2',
+  },
+  {
+    tag: 'span',
+    text: 'Element 3'
+  }
+];
+
+const elementsArray2 = [
+  {
+    text: 'Element 2.1',
+    usePrepend: true,
+  },
+  {
+    text: 'Element 2.2',
+    usePrepend: false,
+  },
+  {
+    text: 'Element 3.3',
+    usePrepend: true,
+  }
+]
+
+// Створіть функцію, яка приймає об'єкт і створює новий елемент з використанням document.createElement, встановлює текст елемента та повертає його в контейнер.
+
+const createElement = ({ tag, text }) => {
+  const newElement = document.createElement(tag);
+  newElement.textContent = text;
+  return newElement;
+};
+
+
+// Пройдіть циклом по масиву і для кожного обєкту застосуйте створену функцію
+
+elementsArray.forEach(item => {
+  const domElement = createElement(item);
+  boxElements.appendChild(domElement);
+});
+
+// before / after the container
+elementsArray2.forEach(({ text, usePrepend }) => {
+  const pElement = document.createElement('p');
+  pElement.textContent = text;
+
+  if (usePrepend) {
+    boxElements2.before(pElement); 
+  } else {
+    boxElements2.after(pElement);
+  }
+});
+
+
+
+
+
 
 
 
