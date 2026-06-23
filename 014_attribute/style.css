@@ -1,0 +1,27 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #cecece;
+  color: #222;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.link{
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+}
