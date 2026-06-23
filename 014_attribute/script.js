@@ -32,3 +32,25 @@ menuData.forEach(item => {
   header.append(link);
 });
 
+// 5)
+// Створіть блок за допомогою js задайте блоку стиль display flex та в середині цього блоку створіть 50 div блоків з правилом border-radius, width 50px height 50px та background-color
+
+const container = document.createElement('div');
+container.classList.add('container');
+body.append(container);
+
+const flexBoxContainer = document.createElement('div');
+flexBoxContainer.classList.add('flex');
+
+container.append(flexBoxContainer);
+
+for (let i = 1; i <= 50; i++) {
+  const box = document.createElement('div');
+  box.classList.add('box');
+  box.classList.add('circle-element');
+  
+  flexBoxContainer.prepend(box);
+};
+
+
+
