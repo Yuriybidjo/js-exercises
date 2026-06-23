@@ -44,11 +44,18 @@ flexBoxContainer.classList.add('flex');
 
 container.append(flexBoxContainer);
 
+function getRandomColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
+};
+
 for (let i = 1; i <= 50; i++) {
   const box = document.createElement('div');
   box.classList.add('box');
   box.classList.add('circle-element');
-  
+  box.style.backgroundColor = getRandomColor();
   flexBoxContainer.prepend(box);
 };
 
