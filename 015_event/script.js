@@ -17,3 +17,17 @@ generate_btn.addEventListener('click', () => {
   text.innerText = newColor; 
 });
 
+// 2. ondblclick
+// Задача: Створіть елемент, який при подвійному кліку збільшує свій розмір в 2 рази(змінюємо width i height).
+
+let changeSize = document.querySelector('.change-size');
+
+changeSize.ondblclick = function () {
+  let newWidth = this.offsetWidth * 2;
+  let newHeight = this.offsetHeight * 2;
+
+  this.style.width = newWidth + 'px';
+  this.style.height = newHeight + 'px';
+};
+
+
