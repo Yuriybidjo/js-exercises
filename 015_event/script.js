@@ -69,3 +69,22 @@ for (let i = 0; i < linksEl.length; i++) {
     linksEl[i].remove();
   });
 };
+
+// 5.event.target   
+// Створіть блок з классом blockContainer з 3 кнопками, в кожної з яких унікальний клас button.first, button.second, button.third.
+// Додайте обробник кліка на blockContainer і при кліку на кнопку виводьте alert в якому повідомляйте яка кнопка отримала клік
+
+const blockContainer = document.querySelector('.block-container');
+
+blockContainer.addEventListener('click', function (event) {
+  if (event.target.classList.contains('button')) {
+
+    const classesAsArray = [...event.target.classList];
+
+    const uniqueClass = classesAsArray.find(className => className !== 'button');
+
+    alert(`Клік отримала кнопка: ${uniqueClass}`); 
+  }
+});
+
+
