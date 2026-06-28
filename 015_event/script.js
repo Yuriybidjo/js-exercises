@@ -57,3 +57,15 @@ btnIncrease.addEventListener('click', () => {
 //   counter.innerText = count;
 //   btnIncrease.disabled = count >= 10;
 // }
+
+// 4. Створіть веб-сторінку з кнопкою та 10 елементами (наприклад, div). Підключіть обробник події onclick до кожного елементу. Коли користувач натисне на елемент,цей елемент має бути видалений зі сторінки
+
+const listEl = document.querySelector('#list-items');
+const linksEl = listEl.querySelectorAll('.item');
+
+
+for (let i = 0; i < linksEl.length; i++) {
+  linksEl[i].addEventListener('click', () => {
+    linksEl[i].remove();
+  });
+};
