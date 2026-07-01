@@ -104,6 +104,35 @@ button {
   cursor: pointer;
 }
 .img-hovered {
-  transform: scale(1.15); 
-  box-shadow: 0 10px 20px rgba(76, 175, 80, 0.6); 
+  transform: scale(1.15);
+  box-shadow: 0 10px 20px rgba(76, 175, 80, 0.6);
+}
+
+p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Game field */
+#game-board {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 8px;
+  background-color: #222;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#player {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #00ffcc;
+  background-color: #00ffcc;
 }

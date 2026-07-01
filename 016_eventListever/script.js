@@ -44,7 +44,7 @@ document.addEventListener('click', function () {
   customMenu.style.display = 'none';
 });
 
-// Завдання 'onMouseOver' і 'onMouseOut': 
+// Завдання 3 'onMouseOver' і 'onMouseOut': 
 // Розмістіть зображення на сторінці, та додайте події де при наведенні курсору на зображення воно збільшується або підсвічується.Коли курсор миші покидає зображення, воно повертається до свого початкового розміру або стилю.
 
 const image = document.querySelector('#target-image');
@@ -56,3 +56,31 @@ image.addEventListener('mouseover', function () {
 image.addEventListener('mouseout', function () {
   image.classList.remove('img-hovered');
 });
+
+// Завдання 4 'keyup': Створіть ігрове поле, де користувач може переміщати об'єкт (наприклад, квадрат або коло) за допомогою клавіш стрілок. Рух об'єкта повинен зупинятися, коли клавіша відпущена
+const player = document.getElementById('player');
+
+let positionX = 0;
+let positionY = 0;
+
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'ArrowRight') {
+    positionX += 10;
+    player.style.left = positionX + 'px';
+  };
+  if (event.key === 'ArrowLeft') {
+    positionX -= 10;
+    player.style.left = positionX + 'px';
+  };
+  if (event.key === 'ArrowUp') {
+    positionY -= 10;
+    player.style.top = positionY + 'px';
+  };
+  if (event.key === 'ArrowDown') {
+    positionY += 10;
+    player.style.top = positionY + 'px';
+  }
+
+  event.preventDefault();
+});
+
