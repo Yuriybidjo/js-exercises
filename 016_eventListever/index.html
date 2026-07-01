@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Listener</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Event Listeners</h1>
+      <div class="boxes box-1">
+        <h2 class="heading">Example 1</h2>
+      </div>
+      <!-- onContextMenu -->
+      <div class="boxes">
+        <h2 class="heading">Example 2</h2>
+        <div id="text-block" class="box-1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, minima.
+          <p id="target-text">Клікніть тут правою кнопкою миші</p>
+        </div>
+        <!-- myself menu is hidden by default -->
+        <ul id="custom-menu" class="context-menu" style="display: none">
+          <li data-action="center">Вирівняти по центру</li>
+          <li data-action="right">Вирівняти по правому краю</li>
+          <li data-action="left">Вирівняти по лівому краю</li>
+          <li data-action="hide">Приховати елемент</li>
+        </ul>
+      </div>
+      <!-- img interactive with hover effect on event eventListener -->
+       <div class="boxes">
+        <h2 class="heading">Example 3</h2>
+        <img id="target-image" class="interactive-img" src="https://picsum.photos/200" alt="Random Image">
+       </div>
+    </div>
+  </body>
+</html>
