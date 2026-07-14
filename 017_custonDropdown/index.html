@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom dropdown menu</title>
+    <!-- Remixicon CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="grid-layout">
+      <h1 class="heading">Основи JS</h1>
+
+      <p class="subheading">Custom Dropdown Menu</p>
+      <p class="subheading">Search form input interactive</p>
+
+      <div class="boxes">
+        <!-- main dropdown navigation list start-->
+        <nav class="main-navigation">
+          <ul class="dropdown-nav">
+            <!-- Dropdown Item 1 -->
+            <li class="dropdown-item">
+              <button type="button" class="dropdown-toggle">
+                <span class="text-label">Magazine</span>
+                <i class="ri-arrow-down-s-line icon-arrow"></i>
+              </button>
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-link border-bottom"
+                  >Magazine Link 1</a
+                >
+                <a href="#" class="dropdown-link border-bottom"
+                  >Magazine Link 2</a
+                >
+                <a href="#" class="dropdown-link">Magazine Link 3</a>
+              </div>
+            </li>
+
+            <!-- Dropdown Item 2 -->
+            <li class="dropdown-item">
+              <button type="button" class="dropdown-toggle">
+                <span class="text-label">Corsi</span>
+                <i class="ri-arrow-down-s-line icon-arrow"></i>
+              </button>
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-link border-bottom">Corsi Link 1</a>
+                <a href="#" class="dropdown-link border-bottom">Corsi Link 2</a>
+                <a href="#" class="dropdown-link">Corsi Link 3</a>
+              </div>
+            </li>
+
+            <!-- Dropdown Item 3 -->
+            <li class="dropdown-item">
+              <button type="button" class="dropdown-toggle">
+                <span class="text-label">Fiere</span>
+                <i class="ri-arrow-down-s-line icon-arrow"></i>
+              </button>
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-link border-bottom">Fiere Link 1</a>
+                <a href="#" class="dropdown-link border-bottom">Fiere Link 2</a>
+                <a href="#" class="dropdown-link">Fiere Link 3</a>
+              </div>
+            </li>
+
+            <!-- Dropdown Item 4 -->
+            <li class="dropdown-item">
+              <button type="button" class="dropdown-toggle">
+                <span class="text-label">Negozi</span>
+                <i class="ri-arrow-down-s-line icon-arrow"></i>
+              </button>
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-link border-bottom"
+                  >Negozi Link 1</a
+                >
+                <a href="#" class="dropdown-link border-bottom"
+                  >Negozi Link 2</a
+                >
+                <a href="#" class="dropdown-link">Negozi Link 3</a>
+              </div>
+            </li>
+          </ul>
+          <!-- Main Dropdown Navigation List end-->
+
+          <!-- Search form wrapper -->
+          <div class="search-wrapper">
+            <!-- Search form -->
+            <form id="searchForm" class="search-form">
+              <input
+                type="text"
+                id="search"
+                class="search-input"
+                placeholder="Search..."
+              />
+              <button type="button" id="searchBtn" class="search-button">
+                <i class="ri-search-line icon-search"></i>
+                <i class="ri-close-line icon-close"></i>
+              </button>
+            </form>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </body>
+</html>
