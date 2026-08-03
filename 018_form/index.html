@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>form</title>
     <script src="./script.js" defer></script>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div class="color-box boxes">
@@ -50,6 +50,91 @@
       </form>
 
       <p id="output-result">Output</p>
+    </div>
+
+    <div class="country-box boxes">
+      <h2>Select Country</h2>
+
+      <select name="country" id="country">
+        <option value="">Select Country</option>
+        <option value="ukraine">Ukraine</option>
+        <option value="japan">Japan</option>
+        <option value="france">France</option>
+        <option value="england">England</option>
+      </select>
+
+      <p class="output-capital">Capital: <span id="capital-text">-</span></p>
+      <p class="output-population">
+        Population: <span id="population-text">-</span>
+      </p>
+    </div>
+
+    <div class="rating-box boxes">
+      <h3>Оцініть якість обслуговування</h3>
+
+      <form id="rating-form">
+        <div class="rating-group">
+          <label><input type="radio" name="rating" value="1" />1</label>
+          <label><input type="radio" name="rating" value="2" />2</label>
+          <label><input type="radio" name="rating" value="3" />3</label>
+          <label><input type="radio" name="rating" value="4" />4</label>
+          <label><input type="radio" name="rating" value="5" />5</label>
+        </div>
+      </form>
+
+      <p
+        id="rating-message"></p>
+    </div>
+
+    <div class="pizza-box boxes">
+      <h2>Замовлення піци</h2>
+
+      <form id="pizza-form">
+        <div>
+          <label for="pizza-select">Оберіть піцу:</label>
+          <select name="pizza" id="pizza-select">
+            <option value="0">Оберіть варіант</option>
+            <option value="150">Маргарита (150 грн)</option>
+            <option value="190">Пепероні (190 грн)</option>
+            <option value="220">Чотири сири (220 грн)</option>
+          </select>
+        </div>
+
+        <div>
+          <p>Розмір піци:</p>
+          <label
+            ><input type="radio" name="size" value="0" checked /> Маленька
+            (Base)</label
+          ><br />
+          <label
+            ><input type="radio" name="size" value="50" /> Середня (+50
+            грн)</label
+          ><br />
+          <label
+            ><input type="radio" name="size" value="100" /> Велика (+100
+            грн)</label
+          >
+        </div>
+
+        <div>
+          <p>Додаткова начинка (+25 грн кожна):</p>
+          <label
+            ><input type="checkbox" name="topping" value="25" /> Подвійний
+            сир</label
+          ><br />
+          <label
+            ><input type="checkbox" name="topping" value="25" /> Гриби</label
+          ><br />
+          <label
+            ><input type="checkbox" name="topping" value="25" /> Мисливські
+            ковбаски</label
+          >
+        </div>
+      </form>
+
+      <h3>
+        Загальна ціна: <span id="total-price">0</span> грн
+      </h3>
     </div>
   </body>
 </html>
